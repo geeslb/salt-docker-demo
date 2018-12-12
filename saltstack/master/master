@@ -24,8 +24,12 @@ peer_run:
 file_roots:
   base:
     - /srv/salt
-    - /srv/salt/formulas/users-formula
+ 
 
+fileserver_backend:
+  - gitfs
 
+gitfs_remotes:
+  - https://github.com/saltstack-formulas/users-formula.git
 
 #comment

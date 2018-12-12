@@ -9,7 +9,7 @@ users:
 
   testuser:
     fullname: Test User
-    password: '$1$v6QfOh7B$bdXc9PAL4J2R70jpZ27t30'
+    password: '$1$YyLsQr/Y$RfVSDe3C40ik4DGHaqHhL.'
     absent: True
     createhome: True
     groups:
