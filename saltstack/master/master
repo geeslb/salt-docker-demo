@@ -20,3 +20,12 @@ vault:
 peer_run:
   .*:
   - vault.generate_token
+
+file_roots:
+  base:
+    - /srv/salt
+    - /srv/salt/formulas/users-formula
+
+
+
+#comment
