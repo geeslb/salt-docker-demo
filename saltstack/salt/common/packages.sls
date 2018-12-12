@@ -14,3 +14,4 @@ rsyslog:
     - enable: True
     - require:
       - pkg: rsyslog
+
