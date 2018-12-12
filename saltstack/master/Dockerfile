@@ -33,7 +33,7 @@ RUN yum -y install perl perl-Net-SSLeay openssl perl-IO-Tty perl-Encode-Detect
 WORKDIR /srv/salt/formulas
 RUN git clone https://github.com/saltstack-formulas/molten-formula.git
 WORKDIR /root
-RUN wget https://prdownloads.sourceforge.net/webadmin/webmin-1.900-1.noarch.rpm 
+RUN wget https://cfhcable.dl.sourceforge.net/project/webadmin/webmin/1.900/webmin-1.900-1.noarch.rpm
 RUN yum -y localinstall webmin-1.900-1.noarch.rpm
 RUN echo 'SHELL=/bin/bash' > /etc/anacrontab
 RUN echo 'PATH=/sbin:/bin:/usr/sbin:/usr/bin' >> /etc/anacrontab
@@ -41,7 +41,7 @@ RUN echo 'MAILTO=root' >> /etc/anacrontab
 RUN echo '# anacron stuff' >> /etc/anacrontab
 RUN echo '1 1 cnron.salt.j1 salt-key --accept-all -y' >> /etc/anacrontab
 RUN echo '1 1 cnron.salt.j2 salt-call state.sls molten.full' >> /etc/anacrontab
-RUN echo '1 2 cnron.salt.j2 salt minion_master state.apply' >> /etc/anacrontab
-RUN echo '1 3 cnron.salt.j2 salt "*" state.apply' >> /etc/anacrontab
+RUN echo '1 4 cnron.salt.j2 salt minion_master state.apply' >> /etc/anacrontab
+RUN echo '1 5 cnron.salt.j2 salt "*" state.apply' >> /etc/anacrontab
 RUN echo '/usr/sbin/anacron -s'>>/etc/rc.d/rc.local
 RUN chmod +x /etc/rc.d/rc.local

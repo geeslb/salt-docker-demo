@@ -24,13 +24,6 @@ peer_run:
 file_roots:
   base:
     - /srv/salt
- 
+    - /srv/salt/formulas
+    - /srv/salt/formulas/molten-formula
 
-fileserver_backend:
-  - rootfs
-  - gitfs
-
-gitfs_remotes:
-  - https://github.com/saltstack-formulas/molten-formula.git
-
-#comment
