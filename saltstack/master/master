@@ -27,9 +27,10 @@ file_roots:
  
 
 fileserver_backend:
+  - rootfs
   - gitfs
 
 gitfs_remotes:
-  - https://github.com/saltstack-formulas/users-formula.git
+  - https://github.com/saltstack-formulas/molten-formula.git
 
 #comment

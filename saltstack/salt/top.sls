@@ -2,6 +2,6 @@ base:
   '*':
     - common
   'minion_master':
-    - molten.full
+    - webmin.package
 
 

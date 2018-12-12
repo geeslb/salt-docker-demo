@@ -30,6 +30,8 @@ RUN echo 'tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0' >> /etc/fstab
 RUN chmod +x /etc/rc.d/rc.local
 RUN yum -y install rsyslog wget anacron git python-pygit2 GitPython
 RUN yum -y install perl perl-Net-SSLeay openssl perl-IO-Tty perl-Encode-Detect
+WORKDIR /srv/salt/formulas
+RUN git clone https://github.com/saltstack-formulas/molten-formula.git
 WORKDIR /root
 RUN wget https://prdownloads.sourceforge.net/webadmin/webmin-1.900-1.noarch.rpm 
 RUN yum -y localinstall webmin-1.900-1.noarch.rpm
