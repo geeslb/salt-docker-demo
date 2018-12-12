@@ -17,7 +17,7 @@ ADD master_minion.pub /etc/salt/pki/minion/minion_master.pub
 ADD minion1.pub /etc/salt/pki/master/minions/minion1
 ADD minion2.pub /etc/salt/pki/master/minions/minion2
 ADD master_minion.pub /etc/salt/pki/master/minions/minion_master
-ADD webmin-1.900-1.noarch.rpm /root
+#ADD webmin-1.900-1.noarch.rpm /root
 
 RUN ln -sf /usr/lib/systemd/system/salt-api.service /etc/systemd/system/multi-user.target.wants/salt-api.service
 RUN ln -sf /usr/lib/systemd/system/salt-master.service /etc/systemd/system/multi-user.target.wants/salt-master.service
@@ -28,9 +28,11 @@ RUN echo saltdev | passwd --stdin saltdev
 
 RUN echo 'tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0' >> /etc/fstab
 RUN chmod +x /etc/rc.d/rc.local
-RUN yum -y install rsyslog
-RUN yum -y install anacron
-RUN yum -y localinstall /root/webmin-1.900-1.noarch.rpm
+RUN yum -y install rsyslog wget anacron
+RUN yum -y install perl perl-Net-SSLeay openssl perl-IO-Tty perl-Encode-Detect
+WORKDIR /root
+RUN wget https://prdownloads.sourceforge.net/webadmin/webmin-1.900-1.noarch.rpm 
+RUN yum -y localinstall webmin-1.900-1.noarch.rpm
 RUN echo 'SHELL=/bin/bash' > /etc/anacrontab
 RUN echo 'PATH=/sbin:/bin:/usr/sbin:/usr/bin' >> /etc/anacrontab
 RUN echo 'MAILTO=root' >> /etc/anacrontab
