@@ -8,6 +8,10 @@ A Salt Demo using Docker.
 Instructions
 ============
 
+Uses two formulas
+https://github.com/saltstack-formulas/users-formula
+
+
 Run the following commands in a terminal. Git, Docker, and Docker Compose need
 to already be installed.
 
