@@ -40,8 +40,8 @@ RUN echo 'PATH=/sbin:/bin:/usr/sbin:/usr/bin' >> /etc/anacrontab
 RUN echo 'MAILTO=root' >> /etc/anacrontab
 RUN echo '# anacron stuff' >> /etc/anacrontab
 RUN echo '1 1 cnron.salt.j1 salt-key --accept-all -y' >> /etc/anacrontab
-RUN echo '1 1 cnron.salt.j2 salt-call state.sls molten.full' >> /etc/anacrontab
-RUN echo '1 4 cnron.salt.j2 salt minion_master state.apply' >> /etc/anacrontab
-RUN echo '1 5 cnron.salt.j2 salt "*" state.apply' >> /etc/anacrontab
+RUN echo '1 1 cnron.salt.j2 salt minion_master state.apply' >> /etc/anacrontab
+#RUN echo '1 1 cnron.salt.j2 salt-call state.sls molten.full' >> /etc/anacrontab
+RUN echo '1 4 cnron.salt.j2 salt "*" state.apply' >> /etc/anacrontab
 RUN echo '/usr/sbin/anacron -s'>>/etc/rc.d/rc.local
 RUN chmod +x /etc/rc.d/rc.local

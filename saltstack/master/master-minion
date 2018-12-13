@@ -146,7 +146,7 @@ id: minion_master
 #auth_safemode: False
 
 # Ping Master to ensure connection is alive (minutes).
-#ping_interval: 0
+ping_interval: 1
 
 # To auto recover minions if master changes IP address (DDNS)
 #    auth_tries: 10
@@ -192,9 +192,9 @@ id: minion_master
 #
 # Example on how to use these settings. The goal: have all minions reconnect within a
 # 60 second timeframe on a disconnect.
-# recon_default: 1000
-# recon_max: 59000
-# recon_randomize: True
+#recon_default: 1000
+#recon_max: 59000
+#recon_randomize: True
 #
 # Each minion will have a randomized reconnect value between 'recon_default'
 # and 'recon_default + recon_max', which in this example means between 1000ms
@@ -214,9 +214,9 @@ id: minion_master
 #
 # In a setup with ~6000 thousand hosts these settings would average the reconnects
 # to about 100 per second and all hosts would be reconnected within 60 seconds.
-# recon_default: 100
-# recon_max: 5000
-# recon_randomize: False
+recon_default: 100
+recon_max: 5000
+recon_randomize: False
 
 # The loop_interval sets how long in seconds the minion will wait between
 # evaluating the scheduler and running cleanup tasks. This defaults to a
