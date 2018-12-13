@@ -1,4 +1,6 @@
 base:
   '*':
     - default
+    - applications
     - users
+ 

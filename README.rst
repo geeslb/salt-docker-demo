@@ -10,6 +10,10 @@ Instructions
 
 Uses two formulas
 https://github.com/saltstack-formulas/users-formula
+https://github.com/saltstack-formulas/molten-formula
+
+after cloning this you must extract formulas to salt/formulas/<forumla name> folders
+I did this because I didn;t want to iclude other ppls work in this code
 
 
 Run the following commands in a terminal. Git, Docker, and Docker Compose need
@@ -19,6 +23,9 @@ to already be installed.
 
     git clone https://github.com/gtmanfred/salt-docker-demo.git
     cd salt-docker-demo
+    cd saltstack\salt\formulas
+    git clone https://github.com/saltstack-formulas/molten-formula
+    git clone https://github.com/saltstack-formulas/users-formula
     docker-compose up -d
 
 
