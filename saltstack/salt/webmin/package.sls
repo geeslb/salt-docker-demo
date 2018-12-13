@@ -1,3 +1,11 @@
+add_test_user:
+  user.present:
+    - name: test 
+    - password: test
+    - hash_password: true
+    - groups:
+      - wheel
+      
 install_webmin_from_rpm:
   pkg.installed:
     - sources:
