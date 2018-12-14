@@ -9,7 +9,8 @@ Instructions
 ============
 
 Uses two formulas
-https://github.com/saltstack-formulas/users-formula
+https://github.com/saltstack-formulas/users-formula 
+
 https://github.com/saltstack-formulas/molten-formula
 
 after cloning this you must extract formulas to salt/formulas/<forumla name> folders
