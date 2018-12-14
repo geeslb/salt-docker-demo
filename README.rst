@@ -8,10 +8,9 @@ A Salt Demo using Docker.
 Instructions
 ============
 
-Uses two formulas 
-https://github.com/saltstack-formulas/users-formula 
-
-https://github.com/saltstack-formulas/molten-formula
+Uses two formulas  
+https://github.com/saltstack-formulas/users-formula  
+https://github.com/saltstack-formulas/molten-formula  
 
 after cloning this you must extract formulas to salt/formulas/<forumla name> folders
 I did this because I didn;t want to iclude other ppls work in this code
