@@ -8,7 +8,7 @@ A Salt Demo using Docker.
 Instructions
 ============
 
-Uses two formulas
+Uses two formulas 
 https://github.com/saltstack-formulas/users-formula 
 
 https://github.com/saltstack-formulas/molten-formula
